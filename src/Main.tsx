@@ -3,11 +3,11 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    NavLink
 } from "react-router-dom"
 import Home from "./Home"
-import Stuff from "./Stuff"
-import Contact from "./Contact"
+import SetupAvailableTimes from "./availableTimes/SetupAvailableTimes"
+import Schedule from "./Schedule"
 import "./index.css"
 
 class Main extends Component {
@@ -17,17 +17,17 @@ class Main extends Component {
                 <div>
                     <h1>Simple SPA</h1>
                     <ul className="header">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/stuff">Stuff</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
+                        <li><NavLink to="/" exact>Home</NavLink></li>
+                        <li><NavLink to="/available-setup">Setup Available Times</NavLink></li>
+                        <li><NavLink to="/schedule">Schedule</NavLink></li>
                     </ul>
                     <div className="content">
                         <Switch>
-                            <Route path="/stuff">
-                                <Stuff />
+                            <Route path="/available-setup">
+                                <SetupAvailableTimes />
                             </Route>
                             <Route path="/contact">
-                                <Contact />
+                                <Schedule />
                             </Route>
                             <Route path="/">
                                 <Home />
