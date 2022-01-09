@@ -1,12 +1,10 @@
+import { Grid, Header } from "semantic-ui-react"
 import React, { Fragment } from "react"
-import { Header, Grid} from "semantic-ui-react"
-
-import { useAppSelector } from "../hooks"
 import ActorSetup from "./ActorSetup"
+import { useAppSelector } from "../hooks"
 
 
 function SetupAvailableTimes() {
-    // The `state` arg is correctly typed as `RootState` already
     const actors = useAppSelector((state) => state.actors)
     const teachers = actors.filter((actor) => actor.teacher)
     const pupils = actors.filter((actor) => !actor.teacher)

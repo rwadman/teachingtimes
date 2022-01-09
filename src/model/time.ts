@@ -43,6 +43,7 @@ const mergeSlots = (slots: TimeSlot[]): TimeSlot[] => {
     return _.concat(...mergedDays)
 
 }
+const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-export {minutesSinceMidnight, timeStr, mergeSlots}
-export type {TimeSlot}
+export { minutesSinceMidnight, timeStr, mergeSlots, weekdays }
+export type { TimeSlot }

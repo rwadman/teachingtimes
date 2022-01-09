@@ -28,3 +28,53 @@ rules:
   semi:
     - error
     - never
+  dot-location:
+    - error
+    - property
+  function-paren-newline:
+    - error
+    - consistent
+  comma-spacing:
+    - error
+    - after: true
+  comma-style:
+    - error
+    - last
+  func-call-spacing:
+    - error
+    - never
+  brace-style:
+    - error
+    - 1tbs
+    - allowSingleLine: true
+  arrow-spacing:
+    - error
+  function-call-argument-newline:
+    - error
+    - consistent
+  key-spacing:
+    - error
+  keyword-spacing:
+    - error
+  max-len:
+    - error
+    - code: 120
+  no-multi-spaces: [error]
+  no-trailing-spaces: [error]
+  no-whitespace-before-property: "error"
+  space-before-blocks: "error"
+  space-in-parens: ["error", "never"]
+  rest-spread-spacing: ["error"]
+  curly: "error"
+  array-bracket-spacing: ["error", "never"]
+  array-bracket-newline: ["error", "consistent"]
+  array-element-newline: ["error", "consistent"]
+  computed-property-spacing: ["error", "never"]
+  object-curly-spacing: ["error", "always"]
+  block-spacing: error
+  sort-imports:
+    - error
+    - ignoreCase: true
+    # - ignoreDeclarationSort: false
+    # - ignoreMemberSort: false
+    # - allowSeparatedGroups: false

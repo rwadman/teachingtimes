@@ -1,9 +1,9 @@
-import React, { Fragment, useState } from "react"
-import { Card, Header, GridColumn, Label, Icon, Form } from "semantic-ui-react"
 import { Actor, addTimeSlot, TimeSlot } from "../model/actorsReducer"
-import { useAppDispatch } from "../hooks"
+import { Card, Form, GridColumn, Header, Icon, Label } from "semantic-ui-react"
+import { minutesSinceMidnight, timeStr, weekdays } from "../model/time"
+import React, { Fragment, useState } from "react"
 import { deleteTimeSlot } from "../model/actorsReducer"
-import { minutesSinceMidnight, timeStr } from "../model/time"
+import { useAppDispatch } from "../hooks"
 
 interface ActorProps {
     actor: Actor
@@ -19,7 +19,6 @@ interface TimeSlotCreatorProps {
     weekday: number
 }
 
-const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
 const RemovableTimeSlot = ({ slot, actorId }: RemovableTimeSlotProps) => {
     const dispatch = useAppDispatch()
@@ -102,7 +101,7 @@ const ActorSetup = ({ actor }: ActorProps) => {
                 {weekdays.map((day, indexOfDay) => (
                     <Fragment key={indexOfDay}>
                         <Header as='h4'>{day}</Header>
-                        <div style={{marginBottom:10}}>
+                        <div style={{ marginBottom: 10 }}>
                             {times.filter((slot) => slot.weekday == indexOfDay)
                                 .map((time, j) => (
                                     <RemovableTimeSlot slot={time} actorId={actor.id} key={j} />

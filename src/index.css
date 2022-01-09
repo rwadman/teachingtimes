@@ -1,41 +1,48 @@
 body {
-  background-color: #FFCC00;
   padding: 20px;
   margin: 0;
 }
 h1, h2, p, ul, li {
   font-family: sans-serif;
 }
-ul.header li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
+
+.dayschedule {
+  position: relative;
 }
-ul.header {
-  background-color: #111;
-  padding: 0;
+
+.dayschedule .slot {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  position: absolute;
+  width: 100%;
 }
-ul.header li a {
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
+
+.dayschedule .slot.booked {
+  background-color: rgb(255, 180, 176);
+  border-color: rgb(194, 119, 114);
+  opacity: 0.7;
 }
-.content {
-  background-color: #FFF;
-  padding: 20px;
+
+.dayschedule .slot.booked.highlighted {
+  opacity: 1;
 }
-.content h2 {
-  padding: 0;
-  margin: 0;
+
+.dayschedule .available {
+  background-color: #efe;
+  border-color: #beb;
+  opacity: .5;
 }
-.content li {
-  margin-bottom: 10px;
+
+.dayschedule .available.pupil {
+  /* background-color: rgb(175, 223, 226); */
+  opacity: .7;
+  /* border-color: rgb(100, 178, 184); */
+  left: 3%;
+  width: 94%;
 }
-.active {
-  background-color: #0099FF;
-}
-.header li a:hover {
-  background-color: #FFCC00;
+
+.ui.grid>.column.narrow:not(.row), .ui.grid>.row>.column.narrow {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }

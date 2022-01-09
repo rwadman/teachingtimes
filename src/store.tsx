@@ -1,5 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit"
 import { actorsReducer } from "./model/actorsReducer"
+import { configureStore } from "@reduxjs/toolkit"
 
 const store = configureStore({
     reducer: {
